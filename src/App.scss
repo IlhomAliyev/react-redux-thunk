@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light dark;
+  background-color: #777;
+  color: white;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+
+  .cashTitle {
+    display: block;
+    background-color: rgb(100, 100, 255);
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border-radius: 15px;
+  }
+  
+  .buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+    button {
+      flex: 0 1 25%;
+      cursor: pointer;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 0;
+      border-radius: 15px;
+      transition: 300ms;
+
+      &:hover {
+        transform: scale(1.05);
+        background-color: royalblue;
+        color: white;
+      }
+      &:active {
+        transform: scale(0.9);
+        transition: 200ms;
+      }
+    }
+  }
+
+  .customerBlock {
+    position: relative;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 15px;
+    transition: 300ms;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 5px 0;
+      color: black;
+    }
+
+    span {
+      font-weight: normal;
+    }
+    
+    &:hover {
+      background-color: red;
+      p {
+        color: white;
+      }
+
+      &::after {
+        content: 'X';
+        font-weight: bold;
+        font-size: 24px;
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media (prefer-color-cheme: light) {
+  :root {
+    background-color: white;
+  }
+}
